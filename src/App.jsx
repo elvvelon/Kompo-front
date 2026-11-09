@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
+import Home from './pages/Home.jsx';
 import Catalog from './pages/Catalog.jsx';
 import ComponentDetail from './pages/ComponentDetail.jsx';
 import Manufacturers from './pages/Manufacturers.jsx';
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
+        <Route index element={<Home />} />
         <Route path="/components" element={<Catalog />} />
         <Route path="/components/:id" element={<ComponentDetail />} />
         <Route path="/manufacturers" element={<Manufacturers />} />
