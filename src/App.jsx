@@ -1,3 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout.jsx';
+import NotFound from './pages/NotFound.jsx';
+
 export default function App() {
-  return <h1>Kompo</h1>;
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+  );
 }
